@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <% include ../partials/ldOut %>
+  </head>
+  <body class="slds">
+    <header>
+    </header>
+    <main>
+      <div >
+        <p>Promethean Special Pricing Registration</p>
+        <div id="lightningLocator"></div>
+          </div>
+      </main>
+        <footer>
+        </footer>
+        <script>
+          debugger
+          var url = "<%= ouathLightningURL %>";
+          var token = "<%= oauthtoken %>";
+          console.log(token);
+            $Lightning.use("c:lightningOutFlowApp", function() {
+                  $Lightning.createComponent("c:SpecialPricingRegistration", { "": ""},
+                     "lightningLocator",
+                      function(cmp) {
+                        debugger
+                        $A.eventService.addHandler({ "event": "c:flowOnStatusChange", "handler" : statusChange});
+                         // do some stuff
+                      });
+            },url,token );
+        </script>
+  </body>
+</html>
