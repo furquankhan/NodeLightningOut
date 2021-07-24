@@ -5,7 +5,7 @@ var port = process.env.PORT || 3000;
 var org = nforce.createConnection({
   clientId: '3MVG9aFryxgomHTZhHGIAIPzVLq9vkqVSJfxkevVeBIrAQRS1LDNOM6e8cocGclRROo6wJom9loFnc.6vRy02',
   clientSecret: 'E2C8344D189AF13D7B14E1CA64EED022DC74DF5B9F4659FEAC194B6D6E095A04',
-  redirectUri: 'http://localhost:3000/oauth/_callback',
+  redirectUri: 'https://rocky-dusk-55318.herokuapp.com/oauth/_callback',
   apiVersion: 'v52.0',  // optional, defaults to current salesforce API version
   environment: 'production',  // optional, salesforce 'sandbox' or 'production', production default
   mode: 'multi' // optional, 'single' or 'multi' user mode, multi default
